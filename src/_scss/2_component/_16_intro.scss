@@ -1,0 +1,60 @@
+.c-intro {
+    dl {
+        display: flex;
+        border: 1px #0080cc solid;
+        margin-bottom: 19px;
+
+        @include sp {
+            margin-bottom: 10px;
+
+        }
+    }
+
+    dt {
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 1.7;
+        max-width: 54px;
+        width: 100%;
+        background-color: #0080cc;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include sp {
+            max-width: 11.7%;
+        }
+    }
+
+    dd {
+        font-size: 1.8rem;
+        font-weight: 300;
+        line-height: 1.5;
+        max-width: 506px;
+        width: 100%;
+        background-color: #fff;
+        color: #0080cc;
+        letter-spacing: 0.04em;
+        padding: 15px 15px 15px 18px;
+
+        @include sp {
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            max-width: 88.3%;
+            padding: 12px 14px;
+
+        }
+    }
+
+    dl:nth-child(1) {
+        dd {
+            padding-left: 24px;
+
+            @include sp {
+                padding-left: 18px;
+            }
+        }
+    }
+}

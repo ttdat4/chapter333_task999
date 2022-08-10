@@ -1,0 +1,72 @@
+.c-photowrap {
+    border: 1px #0080cc solid;
+    display: flex;
+    justify-content: space-between;
+    padding: 39px 38px 17px 40px;
+    max-width: 880px;
+    width: 100%;
+    margin: 34px auto 0;
+
+    &__video {
+        width: 50%;
+        height: 560px;
+        margin-right: 20px;
+    }
+
+    &__img {
+        max-width: 380px;
+        width: 100%;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        &1 {
+            max-width: 180px;
+            height: 120px;
+            width: 100%;
+            object-fit: cover;
+            overflow: hidden;
+            margin-bottom: 26px;
+            cursor: pointer;
+            position: relative;
+
+            img {
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__pickup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #005384;
+        transform: translate(-50%, -50%);
+        visibility: hidden;
+        background: rgba(255, 255, 255, 0.6);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20%;
+    }
+
+    &__pickup::before {
+        content: "";
+        background: url("../../assets/img/icon_zoom.svg") top left no-repeat;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 41%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-size: 100%;
+    }
+}

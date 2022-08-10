@@ -1,0 +1,258 @@
+/* layout
+------------------------------------------------------------*/
+body {
+    font-family: $main-fonts;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5;
+    @include sp {
+        min-width: 320px;
+    }
+}
+//-------------------------------------------------------
+
+
+
+//-------------------------------------------------------
+
+.l-headerwrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px 13px 21px;
+
+    @include tab {
+        flex-wrap: wrap;
+        padding: 20px 20px 0;
+    }
+
+    @include sp {
+        padding: 14px 21px 0 10px;
+    }
+}
+
+.l-aboutwrap {
+    max-width: 1020px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    margin-right: 60px;
+
+    @include sp {
+        width: 100%;
+    }
+}
+
+
+.l-workwrap {
+    max-width: 960px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+
+    @include sp {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 0 0 10px;
+    }
+}
+//-------------------------------------------------------
+.c-mainvisual {
+    max-width: 100%;
+    width: 100%;
+    min-height: 770px;
+    padding: 0;
+    background: url("assets/img/banner1.png") no-repeat center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+
+    @include tab {
+        background: url("assets/img/banner1tab.png") no-repeat center;
+        background-size: cover;
+        min-height: 789px;
+    }
+    @include sp {
+        background: url("assets/img/banner1sp.png") no-repeat center;
+        background-size: cover;
+        min-height: 605px;
+        margin-top: -6px;
+    }
+
+    &__inner {
+        position: absolute;
+        top: 28.2%;
+        left: 120px;
+
+        @include tab {
+            top: 33.5%;
+            left: 41px;
+        }
+
+        @include sp {
+            top: 32%;
+            left: 20px;
+        }
+
+        h1 {
+            font-size: 5rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            font-family: "YuGothicUI-Regular";
+            height: 241px;
+
+            @include tab {
+                font-size: 4rem;
+                letter-spacing: 0.044em;
+                height: 185px;
+            }
+
+            @include sp {
+                font-size: 2.8rem;
+                letter-spacing: 0.01em;
+                height: 134px;
+            }
+        }
+    
+        p {
+            width: fit-content;
+            background: #0080cc;
+            height: calc((100% - 34px) / 3);
+
+            @include sp {
+                height: calc((100% - 20px) / 3);
+            }
+        }
+    
+        p:nth-child(1) {
+            margin-bottom: 16px;
+            padding: 0 3px 0 8px;
+
+            @include tab {
+                margin-bottom: 17px;
+                padding: 0 9px 0 8px;
+            }
+            @include sp {
+                width: 131px;
+                margin-bottom: 7px;
+                padding: 0 0 0 5px;
+            }
+        }
+    
+        p:nth-child(2) {
+            margin-bottom: 18px;
+            padding: 0 10px 0 8px;
+            @include tab {
+                margin-bottom: 17px;
+                padding: 0 12px 0 8px;
+            }
+
+            @include sp {
+                margin-bottom: 8px;
+                padding: 1px 7px 0 5px;
+                height: 41px;
+            }
+        }
+    
+        p:nth-child(3) {
+            padding: 0 0 0 8px;
+            @include tab {
+                padding: 0 0 0 8px;
+            }
+            @include sp {
+                padding: 0 11px 0 5px;
+            }
+        }
+    }
+
+    &__scroll {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        bottom: -6%;
+        left: 50%;
+        max-width: 960px;
+        width: 100%;
+        height: 95px;
+        text-align: center;
+        background-color: #fff;
+
+        @include tab {
+            max-width: 687px;
+            height: 66px;
+            bottom: -4%;
+        }
+
+        @include sp {
+            max-width: 355px;
+            height: 73px;
+        }
+
+        &text {
+            color: #0080cc;
+
+            a {
+                font-size: 2rem;
+                letter-spacing: 0.024em;
+                position: relative;
+                top: -55px;
+
+                @include tab {
+                    top: -63px;
+                    left: 1.5%;
+                }
+
+                @include sp {
+                    font-size: 1.6rem;
+                    top: -41px;
+                }
+            }
+    
+            p {
+                font-size: 2.6rem;
+                font-weight: 400;
+                letter-spacing: 0.074em;
+                padding: 2px 0 0 3px;
+
+                @include tab {
+                    font-size: 2.2rem;
+                    padding: 0 0 0 5px;
+                    margin-top: -14px;
+                }
+
+                @include sp {
+                    font-size: 1.8rem;
+                    letter-spacing: 0.02em;
+                    margin-top: -12px;
+                }
+            }
+
+            span {
+                color: #ff5800;
+            }
+        }
+       
+
+    }
+
+    &__scroll::before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        top: -12px;
+        border-top: 30px solid #0080cc;
+        left: 50%;
+
+        @include tab {
+            top: -20.5px;
+            left: 51.4%;
+        }
+        @include sp {
+            border-top: 27px solid #0080cc;
+            top: -15px;
+        }
+
+    }
+
+    
+}
